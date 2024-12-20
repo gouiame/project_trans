@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: radial-gradient(ellipse at top, var(--tw-gradient-stops));
+  --tw-gradient-from: #1e3a8a var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(30 58 138 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(15 23 42 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from),
+    #0f172a var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-to: #000 var(--tw-gradient-to-position);
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-400 via-purple-500 to-purple-500/70 bg-clip-text text-transparent;
+}
+
+
+.glass-card {
+  @apply rounded-xl p-6 border border-white/10 bg-white/10;
+  @apply shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-4px_rgba(0,0,0,0.1)];
+  @apply backdrop-blur-lg;
+}
+
+.glass-effect {
+  @apply border border-white/10 bg-white/10 shadow-lg backdrop-blur-sm;
+}
+
+.glass-button {
+  @apply rounded-lg px-6 py-2.5 border border-white/10 bg-white/10 shadow-lg transition-all duration-300 ease-out backdrop-blur-sm hover:bg-white/20 focus:outline-none;
+}
